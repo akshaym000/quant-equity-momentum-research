@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/quant_equity_momentum_research.egg-info/PKG-INFO
+src/quant_equity_momentum_research.egg-info/SOURCES.txt
+src/quant_equity_momentum_research.egg-info/dependency_links.txt
+src/quant_equity_momentum_research.egg-info/requires.txt
+src/quant_equity_momentum_research.egg-info/top_level.txt
+tests/test_data_validation.py
+tests/test_features.py
+tests/test_multiple_testing.py
+tests/test_no_lookahead.py
+tests/test_statistics.py

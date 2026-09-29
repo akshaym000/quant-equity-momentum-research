@@ -1,0 +1,18 @@
+{
+  "rows": 2703531,
+  "tickers": 472,
+  "dates": 6573,
+  "start": "2000-01-03",
+  "end": "2026-02-20",
+  "suspicious_abs_daily_moves_over_80pct": 3,
+  "ticker_calendar_gaps_over_7_days": 0,
+  "missing_volume": 0,
+  "source_path": "data/raw/equity_daily.csv",
+  "columns": [
+    "ticker",
+    "date",
+    "adj_close",
+    "volume"
+  ],
+  "source_sha256": "82f3ab3ab6821c54b67a555c1f52c60dc4c162923499f2a1403c51d08944722a"
+}

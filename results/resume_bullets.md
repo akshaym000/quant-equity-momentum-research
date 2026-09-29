@@ -1,0 +1,5 @@
+# Resume bullets (generated from executed results)
+
+- Designed and executed a pre-specified 5-day equity momentum study across 472 tickers and 6573 dates, with chronological holdout and leakage-aware features.
+- Estimated the top-minus-bottom spread at -0.00385973 (95% CI -0.00454881 to -0.00317065) and a date/ticker-clustered regression slope of -0.0394806.
+- Retained all 25 lookback/horizon tests with Bonferroni and FDR adjustments; The development-period primary estimate is negative, opposite the pre-specified momentum direction. The validation-period spread is also negative. In the final chronological holdout, the spread is -0.000702977 (date-level p=0.21841) and its interval includes zero; the development result therefore does not survive as a statistically distinguishable effect in the final holdout. This is evidence against the specified positive momentum hypothesis, not proof of a profitable reversal or a causal effect. Overlap and possible survivorship bias remain important limitations.

@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "rows": 2703531,
+    "tickers": 472,
+    "dates": 6573,
+    "start": "2000-01-03",
+    "end": "2026-02-20",
+    "suspicious_abs_daily_moves_over_80pct": 3,
+    "ticker_calendar_gaps_over_7_days": 0,
+    "missing_volume": 0,
+    "source_path": "data/raw/equity_daily.csv",
+    "columns": [
+      "ticker",
+      "date",
+      "adj_close",
+      "volume"
+    ],
+    "source_sha256": "82f3ab3ab6821c54b67a555c1f52c60dc4c162923499f2a1403c51d08944722a"
+  },
+  "hypothesis": "H0: conditional on the design, past 5-session return has no association with next 5-session return. H1: association is positive (momentum).",
+  "mechanism": "Gradual information diffusion or underreaction could produce continuation; temporary liquidity pressure could produce reversal. Both are hypotheses, not assumed facts.",
+  "falsification_criteria": [
+    "primary slope/spread is not distinguishable from zero",
+    "estimated sign is non-positive",
+    "direction fails in the untouched final chronological holdout",
+    "effect is economically small under declared cost sensitivity",
+    "effect is concentrated in a narrow time or security slice"
+  ],
+  "primary": {
+    "n_bottom": 299699,
+    "n_top": 298880,
+    "n_dates": 3918,
+    "spread": -0.003859733223125288,
+    "se": 0.000351468440121582,
+    "ci_low": -0.004548811633630819,
+    "ci_high": -0.0031706548126197573,
+    "welch_t": -22.76456153556765,
+    "welch_p_value": 1.1539334633236921e-114,
+    "date_level_t": -10.981734865839183,
+    "p_value": 1.1795527943297217e-27,
+    "cohen_d_date": -0.17544408807575132
+  },
+  "regression_primary_beta": -0.03948061585893491,
+  "regression_primary_p": 1.1140462153315424e-15,
+  "complete_primary_observations": 1491262,
+  "primary_dates": 3918,
+  "primary_tickers": 435,
+  "iid_power_sensitivity": {
+    "meaningful_spread_predeclared": 0.001,
+    "observed_future_return_sd": 0.05434162903225616,
+    "standardized_effect": 0.018402098314101313,
+    "approx_n_per_group_alpha_0_05_power_0_80": 46355.68222303795,
+    "caveat": "Textbook iid approximation only; overlap and cross-sectional dependence reduce effective sample size."
+  },
+  "final_holdout": {
+    "split": "final_holdout",
+    "start": "2020-12-23",
+    "end": "2026-02-20",
+    "n_bottom": 121224,
+    "n_top": 120816,
+    "n_dates": 1290,
+    "spread": -0.0007029766088273677,
+    "se": 0.0005708911331600497,
+    "ci_low": -0.0018229543054999048,
+    "ci_high": 0.00041700108784516936,
+    "welch_t": -3.2956119184410513,
+    "welch_p_value": 0.000982217315233033,
+    "date_level_t": -1.2313671871836338,
+    "p_value": 0.21841017287531492,
+    "cohen_d_date": -0.034284097491860885
+  },
+  "interpretation": "Observational association, not causal evidence or a deployable strategy."
+}

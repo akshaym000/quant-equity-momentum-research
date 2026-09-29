@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-equity-momentum-research"
+version = "1.0.0"
+description = "Reproducible, pre-specified study of short-horizon equity returns"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy==2.2.6; python_version < '3.14'",
+  "numpy==2.5.3; python_version >= '3.14'",
+  "pandas==2.3.0; python_version < '3.14'",
+  "pandas==3.0.6; python_version >= '3.14'",
+  "scipy==1.15.3; python_version < '3.14'",
+  "scipy==1.18.1; python_version >= '3.14'",
+  "statsmodels==0.14.4; python_version < '3.14'",
+  "statsmodels==0.14.5; python_version >= '3.14'",
+  "matplotlib==3.10.3; python_version < '3.14'",
+  "matplotlib==3.11.0; python_version >= '3.14'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.1"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100

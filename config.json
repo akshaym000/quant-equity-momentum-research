@@ -1,0 +1,15 @@
+{
+  "data_path": "data/raw/equity_daily.csv",
+  "adjusted_close_column": "Adj Close",
+  "date_column": "Date",
+  "ticker_column": "Ticker",
+  "volume_column": "Volume",
+  "primary_lookback": 5,
+  "primary_horizon": 5,
+  "quintiles": 5,
+  "research_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "meaningful_spread": 0.001,
+  "cost_bps_round_trip": [0, 5, 10, 25],
+  "seed": 20260928
+}
